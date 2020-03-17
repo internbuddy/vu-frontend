@@ -53,13 +53,13 @@ Date : 01-Jan-2020
 				<br/><h2>Campus</h2>
 					<span class="byline">For all campuses under VU</span></div>
 					<p>VU is one of the largest universities in India with 218 colleges affiliated to it with an intake capacity of over 467,100 undergraduate students and 12,666 postgraduate students. The university encompasses technical and management fields which offer 30 undergraduate and 71 postgraduate courses.It has around 1800 PhD candidates.</p>
-				<a href="api/login_for_campus.php" class="button">Login Here</a></div>
+				<a href="frontend/login_for_campus.php" class="button">Login Here</a></div>
 			<div class="ebox2"> <span class="fas fa-user-graduate" style='font-size:70px;color:blue'></span>
 				<div class="title">
 				<br/><h2>Student</h2>
 					<span class="byline">Students under VU</span> </div>
 					<p>VU is one of the largest universities in India with 218 colleges affiliated to it with an intake capacity of over 467,100 undergraduate students and 12,666 postgraduate students. The university encompasses technical and management fields which offer 30 undergraduate and 71 postgraduate courses.It has around 1800 PhD candidates.</p>
-				<a href="api/student_login.php" class="button">Login Here</a></div>
+				<a href="frontend/student_login.php" class="button">Login Here</a></div>
 		</div>
 	</div>
 </div>
