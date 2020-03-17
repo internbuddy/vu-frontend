@@ -27,8 +27,9 @@ if($nameErr =="" && $emailErr =="" &&  $phoneErr == "" && $dateErr =="" && $time
 $student_id=3;
 $campus_id=4;
 
-$url= "http://localhost/virtual-university-master/api/interview-request.php";
-
+//$url= "http://localhost/virtual-university/vu-backend/api/interview-request.php";
+$url= "https://mavoix.in/virtual-university/api/interview-request.php";
+	
   $data = array(
   'name' => $name,
   'contact' => $contact,
