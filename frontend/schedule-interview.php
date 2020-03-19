@@ -60,7 +60,7 @@ $response = curl_exec($req);
 $error = curl_errno($req);
 if ($error == CURLE_SSL_PEER_CERTIFICATE || $error == CURLE_SSL_CACERT
 || $error == 77) {
-    curl_setopt($req, CURLOPT_CAINFO, __DIR__ . '/cert-bundle.crt');
+    curl_setopt($req, CURLOPT_CAINFO, __DIR__ . '/var/tmp/cert.pem');
     $response = curl_exec($req);
 }
 
