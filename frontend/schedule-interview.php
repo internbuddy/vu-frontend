@@ -47,7 +47,8 @@ $req = curl_init($url);
 curl_setopt($req, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($req, CURLOPT_POST, true);
 curl_setopt($req, CURLOPT_POSTFIELDS, $fields_string);
-curl_setopt($req,CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($req, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($req, CURLOPT_CAINFO, '/var/tmp/cert.pem');
 curl_setopt($req, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
 
 $response = curl_exec($req);
