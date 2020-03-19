@@ -48,7 +48,7 @@ curl_setopt($req, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($req, CURLOPT_POST, true);
 curl_setopt($req, CURLOPT_POSTFIELDS, $fields_string);
 curl_setopt($req, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($req, CURLOPT_CAINFO, '/var/tmp/cert.pem');
+curl_setopt($req, CURLOPT_CAINFO, '/var/tmp/cacert.pem');
 curl_setopt($req, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
 
 $response = curl_exec($req);
@@ -61,7 +61,7 @@ $response = curl_exec($req);
 $error = curl_errno($req);
 if ($error == CURLE_SSL_PEER_CERTIFICATE || $error == CURLE_SSL_CACERT
 || $error == 77) {
-    curl_setopt($req, CURLOPT_CAINFO, __DIR__ . '/var/tmp/cert.pem');
+    curl_setopt($req, CURLOPT_CAINFO, '/var/tmp/cacert.pem');
     $response = curl_exec($req);
 }
 
