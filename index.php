@@ -34,7 +34,7 @@ Date : 01-Jan-2020
 				<li><a href="#" accesskey="2" title="">Faculty</a></li>
 				<li><a href="#" accesskey="3" title="">Placement</a></li>
 				<li><a href="#" accesskey="4" title="">Events</a></li>
-				<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+				<li><a href="frontend/api_test.php" accesskey="5" title="">Contact Us</a></li>
 			</ul>
 		</div>
 	</div>
