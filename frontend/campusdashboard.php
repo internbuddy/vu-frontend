@@ -305,7 +305,7 @@ $('.responsive').slick({
 
 console.log("campus details");
       http = new XMLHttpRequest();
-                    http.open('POST', 'http://localhost/demo-api/campus_details.php', true);
+                    http.open('POST', 'https://mavoix.in/virtual-university/api/campus-details.php', true);
                     //Send the proper header information along with the request
                     http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
                     http.onreadystatechange = function() { //Call a function when the state changes.
