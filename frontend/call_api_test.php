@@ -13,21 +13,21 @@ $url= "https://mavoix.in/virtual-university/api/get-student-info.php";
 $req = curl_init($url);
 curl_setopt($req, CURLOPT_URL, $url);
 curl_setopt($req, CURLOPT_RETURNTRANSFER, true);
-//curl_setopt($req, CURLOPT_POST, true);
-//curl_setopt($req, CURLOPT_POSTFIELDS, $fields_string);
+curl_setopt($req, CURLOPT_POST, true);
+curl_setopt($req, CURLOPT_POSTFIELDS, $fields_string);
 //curl_setopt($req, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($req, CURLOPT_CAINFO, '/var/tmp/cacert.pem');
-curl_setopt($req, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
+//curl_setopt($req, CURLOPT_CAINFO, '/var/tmp/cacert.pem');
+//curl_setopt($req, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
 
-       curl_setopt($req, CURLOPT_RETURNTRANSFER => true);     // return web page
+//       curl_setopt($req, CURLOPT_RETURNTRANSFER => true);     // return web page
        curl_setopt($req, CURLOPT_HEADER         => false);    // don't return headers
-       curl_setopt($req,  CURLOPT_FOLLOWLOCATION => true);     // follow redirects
+ //      curl_setopt($req,  CURLOPT_FOLLOWLOCATION => true);     // follow redirects
        curl_setopt($req,  CURLOPT_ENCODING       => "");       // handle all encodings
 //       curl_setopt($req, CURLOPT_USERAGENT      => "spider"); // who am i
        curl_setopt($req,  CURLOPT_AUTOREFERER    => true);     // set referer on redirect
        curl_setopt($req, CURLOPT_CONNECTTIMEOUT => 120);      // timeout on connect
        curl_setopt($req, CURLOPT_TIMEOUT        => 120);      // timeout on response
-       curl_setopt($req, CURLOPT_MAXREDIRS      => 10);       // stop after 10 redirects
+ //      curl_setopt($req, CURLOPT_MAXREDIRS      => 10);       // stop after 10 redirects
 //       curl_setopt($req,  CURLOPT_SSL_VERIFYPEER => false);     // Disabled SSL Cert checks
 
 
