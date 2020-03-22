@@ -7,8 +7,8 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 error_reporting(0);
 
 //$url= "https://mavoix.in/virtual-university/api/api-request-test.php";
-//$url= "https://mavoix.in/virtual-university/api/get-student-details.php;
-$url= "https://mavoix.in/virtual-university/api/get-student-info.php;
+//$url= "https://mavoix.in/virtual-university/api/get-student-details.php";
+$url= "https://mavoix.in/virtual-university/api/get-student-info.php";
 
 $req = curl_init($url);
 curl_setopt($req, CURLOPT_RETURNTRANSFER, true);
