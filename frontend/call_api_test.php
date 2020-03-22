@@ -11,6 +11,7 @@ error_reporting(0);
 $url= "https://mavoix.in/virtual-university/api/get-student-info.php";
 
 $req = curl_init($url);
+curl_setopt($req, CURLOPT_URL, $url);
 curl_setopt($req, CURLOPT_RETURNTRANSFER, true);
 //curl_setopt($req, CURLOPT_POST, true);
 //curl_setopt($req, CURLOPT_POSTFIELDS, $fields_string);
