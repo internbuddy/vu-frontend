@@ -1,7 +1,9 @@
 <?php
 echo "Calling API....";
 //$url= "https://mavoix.in/virtual-university/api/api-request-test.php";
-$url= "https://mavoix.in/virtual-university/api/get-student-details.php;
+//$url= "https://mavoix.in/virtual-university/api/get-student-details.php;
+$url= "https://mavoix.in/virtual-university/api/get-student-info.php;
+
 $req = curl_init($url);
 curl_setopt($req, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($req, CURLOPT_POST, true);
