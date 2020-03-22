@@ -246,6 +246,16 @@
 </div>
 </div>
 </div>
+    
+  <form method= "post">	
+<input type="submit" name="submit" id="submit" value="Campus details"  onclick="campus_details();">
+     
+<div  id="next">
+</div>
+
+</form>
+        
+       
 <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-db44b196776521ea816683afab021f757616c80860d31da6232dedb8d7cc4862.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js'></script>
@@ -284,6 +294,36 @@ $('.responsive').slick({
 
  
   ] });
+    </script>
+    
+    <script>
+        
+        
+        function campus_details()
+
+	{
+
+console.log("campus details");
+      http = new XMLHttpRequest();
+                    http.open('POST', 'http://localhost/demo-api/campus_details.php', true);
+                    //Send the proper header information along with the request
+                    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                    http.onreadystatechange = function() { //Call a function when the state changes.
+                    	console.log(http.readyState );
+                    	console.log(http.status);
+                        if (http.readyState == 4 && http.status == 200) {
+                        	
+                            var response = JSON.parse(http.responseText);
+                         
+                           alert(response);
+                            
+                            document.getElementById('next').innerHTML=response;
+                        }
+                    }
+                    http.send();
+        }
+        
+        
     </script>
 </body>
 </html>
