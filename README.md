@@ -2,7 +2,7 @@
 Virtual University UI
 
 ## Configuration
-- manifest.txt	
+- manifest
 - schedule_interview.sql	
 - system_users.sql	
 - vu_campus_master.sql	
