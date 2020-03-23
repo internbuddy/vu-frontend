@@ -7,7 +7,7 @@
  <?php
  if (isset($_POST["submit"])){
  $curl = curl_init();
- curl_setopt($curl, CURLOPT_URL, 'https://mavoix.in/virtual-university/api/get-student-info.php');
+ curl_setopt($curl, CURLOPT_URL, 'https://mavoix.in/workspace/vu-backend/api/get-student-info.php');
  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
  curl_exec($curl);
  }
