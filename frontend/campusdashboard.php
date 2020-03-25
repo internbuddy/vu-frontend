@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+
+<?php
+
+if(isset($_POST['campus_details'])){
+	
+	echo " get campus details";
+}
+?>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -248,14 +257,15 @@
 </div>
     
   <form method= "post">	
-<input type="submit" name="submit" id="submit" value="Campus details"  onclick="campus_details();">
+<!-- <input type="submit" name="submit" id="submit" value="Campus details"  onclick="campus_details();"> -->
+	  
+	  <input type="submit" name="campus_details" id="submit" value="Campus details" >
      
 <div  id="next">
 </div>
 
 </form>
-        
-       
+         
 <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-db44b196776521ea816683afab021f757616c80860d31da6232dedb8d7cc4862.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js'></script>
