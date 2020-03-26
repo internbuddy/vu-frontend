@@ -14,7 +14,7 @@ if(isset($_POST['campus_details'])){
 	if($status=='1'){
 			
 	$data= $response->data;
-		print_r $data;
+		print_r($data);
 		
 	foreach($data as $res)
 		{
