@@ -16,12 +16,13 @@ if(isset($_POST['campus_details'])){
 	$data= $response->data;
 		print_r($data);
 		
-	foreach($data as $res)
+	foreach($data->data as $res->$camp)
 		{
 		echo "<br>";
 		echo "entered the loop";
-		echo $res->stdClass['campus_id']; 
+		echo $camp->campus_id; 
 		//echo $res->campus_id = $res['campus_id']; 
+		echo $camp->campus_name; 
 		    echo $res['campus_id'];
 		echo "<br>";
 		echo $res['campus_name'];
