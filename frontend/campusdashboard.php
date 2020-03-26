@@ -13,8 +13,8 @@ if(isset($_POST['campus_details'])){
         $status= $response->status;		
 	if($status=='1'){
 			
-	$data= $response[0]->data;
-		echo $data;
+	$data= $response->data;
+		print_r $data;
 		
 	foreach($data as $res)
 		{
