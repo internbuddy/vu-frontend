@@ -2,14 +2,12 @@
 
 <?php
 
-if(isset($_POST['campus_details'])){
-	
-	echo " get campus details";
-	
-	 $curl = curl_init();
+if(isset($_POST['campus_details'])){	
+ $curl = curl_init();
  curl_setopt($curl, CURLOPT_URL, 'https://mavoix.in/workspace/vu-backend/api/get-campus-details.php');
  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
- curl_exec($curl);
+ //curl_exec($curl);
+	echo $curl;
 }
 ?>
 
