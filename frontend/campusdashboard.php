@@ -9,14 +9,13 @@ if(isset($_POST['campus_details'])){
  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 	
 	$json= curl_exec($curl);
-	$response = json_decode($json);
-	
-        $status= $response->status;	
-	
+	$response = json_decode($json);	
+        $status= $response->status;		
 	if($status=='1'){
 			
-	$data= $response->data;
+	$data= $response[0]->data;
 		echo $data;
+		
 	foreach($data as $res)
 		{
 		echo "entered the loop";
@@ -30,6 +29,8 @@ if(isset($_POST['campus_details'])){
 		}
 		
 		
+	}else{
+		echo "No Data Found";
 	}
 }
 ?>
