@@ -6,11 +6,10 @@ if(isset($_POST['campus_details'])){
  $curl = curl_init();
  curl_setopt($curl, CURLOPT_URL, 'https://mavoix.in/workspace/vu-backend/api/get-campus-details.php');
  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-	
-	$json1= curl_exec($curl);
-	
-	$json = $_GET['dictionary'];
-  	
+	echo "<br><br>";
+	echo $curl;
+	echo  "<br> <br>";
+	$json= curl_exec($curl);
 	echo "<br> json----------";
 	echo $json;
 	echo "<br> response------";
