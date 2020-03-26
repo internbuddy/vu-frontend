@@ -8,8 +8,11 @@ if(isset($_POST['campus_details'])){
  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 // curl_exec($curl);
 	$json= curl_exec($curl);
-	
+	echo "<br> json----------";
+	echo $json;
+	echo "<br> response------";
 	$response = json_decode($json);
+	echo "<br>";
 	echo $response;
 	echo "<br> Status-----";
         echo $status->status;	
