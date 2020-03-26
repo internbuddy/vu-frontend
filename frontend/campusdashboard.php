@@ -18,7 +18,9 @@ if(isset($_POST['campus_details'])){
 		
 	foreach($data as $res)
 		{
+		echo "<br>";
 		echo "entered the loop";
+		echo $res->campus_id = $res['campus_id']; 
 		    echo $res['campus_id'];
 		echo "<br>";
 		echo $res['campus_name'];
