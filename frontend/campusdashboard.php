@@ -7,21 +7,28 @@ if(isset($_POST['campus_details'])){
  curl_setopt($curl, CURLOPT_URL, 'https://mavoix.in/workspace/vu-backend/api/get-campus-details.php');
  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-	echo "<br><br>";
-	echo $curl;
-	echo  "<br> <br>";
-	$json= curl_exec($curl);
-	echo "<br> json----------";
-	echo $json;
-	echo "<br> response------";
-	$response = json_decode($json);
-	echo $response->data;
-	echo "<br> Status-----";
-        echo $response->status;	
-	echo "<br> MSG-----";
 	
-	echo $response->msg;
-	echo $response['campus_id'];
+	$json= curl_exec($curl);
+	$response = json_decode($json);
+	
+        $status= $response->status;	
+	
+	if($status=='1'){
+			
+	$data= $response->data;
+	foreach($data as $res)
+		{
+		    echo $res['campus_id'];
+		echo "<br>";
+		echo $res['campus_name'];
+		echo "<br>";
+		echo $res['campus_image'];
+		echo "<br>";
+		echo $res['campus_staus'];
+		}
+		
+		
+	}
 }
 ?>
 
