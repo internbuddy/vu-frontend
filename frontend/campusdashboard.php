@@ -16,8 +16,10 @@ if(isset($_POST['campus_details'])){
 	if($status=='1'){
 			
 	$data= $response->data;
+		echo $data;
 	foreach($data as $res)
 		{
+		echo "entered the loop";
 		    echo $res['campus_id'];
 		echo "<br>";
 		echo $res['campus_name'];
