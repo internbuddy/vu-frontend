@@ -1,46 +1,4 @@
 <!DOCTYPE html>
-
-<?php
-
-if(isset($_POST['campus_details'])){	
- $curl = curl_init();
- curl_setopt($curl, CURLOPT_URL, 'https://mavoix.in/workspace/vu-backend/api/get-campus-details.php');
- curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
- curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-	
-	$json= curl_exec($curl);
-	$response = json_decode($json);	
-        $status= $response->status;		
-	if($status=='1'){
-			
-	$data= $response->data;
-		print_r($data);
-		echo "<br> testing    ";
-		echo $response->data[0]->campus_name;
-		
-	foreach($data as $res)
-		{
-		echo "<br>";
-		echo "entered the loop";
-		echo $res->campus_id; 
-		//echo $res->campus_id = $res['campus_id']; 
-		echo $res->campus_name; 
-		    echo $res['campus_id'];
-		echo "<br>";
-		echo $res['campus_name'];
-		echo "<br>";
-		echo $res['campus_image'];
-		echo "<br>";
-		echo $res['campus_staus'];
-		}
-		
-		
-	}else{
-		echo "No Data Found";
-	}
-}
-?>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -289,11 +247,69 @@ if(isset($_POST['campus_details'])){
 </div>
 </div>
     
-  <form method= "post">	
-<!-- <input type="submit" name="submit" id="submit" value="Campus details"  onclick="campus_details();"> -->
-	  
-	  <input type="submit" name="campus_details" id="submit" value="Campus details" >
-     
+	
+<?php
+
+if(isset($_POST['campus_details'])){	
+ $curl = curl_init();
+ curl_setopt($curl, CURLOPT_URL, 'https://mavoix.in/workspace/vu-backend/api/get-campus-details.php');
+ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+ curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+	
+	$json= curl_exec($curl);
+	$response = json_decode($json);	
+        $status= $response->status;		
+	if($status=='1'){
+			
+	$data= $response->data;
+		print_r($data);
+		echo "<br> testing    ";
+		echo $response->data[0]->campus_name;
+	    ?>
+	<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th>Sr. No.</th>
+            <th>Campus ID</th>
+            <th>Campus Name</th>
+            <th>Campus Image</th>
+	    <th>campus_status</th>
+            <th>campus_longitude</th> 
+	    <th>campus_latitude</th>		
+        </tr>
+    </thead>
+    <tbody>	    
+	    <?php
+		$n=0;
+	foreach($data as $res)
+		{
+	
+		echo "
+		<tr>
+            <td>".$n++."</td>           
+            <td>".$res->campus_id."</td>
+	    <td>".$res->campus_name."</td>
+	    <td>".$res->campus_image."</td>
+	    <td>".$res->campus_status."</td>
+	    <td>".$res->campus_longitude."</td>
+	    <td>".$res->campus_latitude."</td>
+        </tr>";
+		
+		}
+		
+		?>
+		</tbody>
+		</table>
+	    
+	<?php	
+	}else{
+		echo "No Data Found";
+	}
+}
+?>
+	
+  <form method= "post">		  
+	  <input type="submit" name="campus_details" id="submit" value="Campus details" >     
 <div  id="next">
 </div>
 
