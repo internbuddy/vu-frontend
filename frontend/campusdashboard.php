@@ -16,7 +16,7 @@ if(isset($_POST['campus_details'])){
 	$data= $response->data;
 		print_r($data);
 		echo "<br> testing    ";
-		echo $response->data[0]['campus_name'];
+		echo $response->data[0]->['campus_name'];
 		
 	foreach($data->data as $res->$camp)
 		{
