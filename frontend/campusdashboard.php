@@ -246,7 +246,7 @@
 </div>
 </div>
 </div>
-    
+    <br><br><br>
 	
 <?php
 
@@ -288,8 +288,7 @@ if(isset($_POST['campus_details'])){
 	    <td>".$res->campus_latitude."</td>
         </tr>";
 		
-		}
-		
+		}		
 		?>
 		</tbody>
 		</table>
@@ -301,8 +300,9 @@ if(isset($_POST['campus_details'])){
 }
 ?>
 	
-  <form method= "post">		  
-	  <input type="submit" name="campus_details" id="submit" value="Campus details" >     
+  <form method= "post">		
+	  <button type="submit" name="campus_details" id="submit" value="Campus details" >Get Campus Details</button>
+<!-- 	  <input type="submit" name="campus_details" id="submit" value="Campus details" >      -->
 <div  id="next">
 </div>
 
