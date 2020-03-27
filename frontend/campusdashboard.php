@@ -18,13 +18,13 @@ if(isset($_POST['campus_details'])){
 		echo "<br> testing    ";
 		echo $response->data[0]->campus_name;
 		
-	foreach($data->data as $res->$camp)
+	foreach($data as $res)
 		{
 		echo "<br>";
 		echo "entered the loop";
-		echo $camp->campus_id; 
+		echo $res->campus_id; 
 		//echo $res->campus_id = $res['campus_id']; 
-		echo $camp->campus_name; 
+		echo $res->campus_name; 
 		    echo $res['campus_id'];
 		echo "<br>";
 		echo $res['campus_name'];
