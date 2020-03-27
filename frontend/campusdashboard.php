@@ -259,18 +259,13 @@ if(isset($_POST['campus_details'])){
 	$json= curl_exec($curl);
 	$response = json_decode($json);	
         $status= $response->status;		
-	if($status=='1'){
-			
-	$data= $response->data;
-		print_r($data);
-		echo "<br> testing    ";
-		echo $response->data[0]->campus_name;
+	if($status=='1'){			
+	$data= $response->data;		
 	    ?>
 	<table class="table">
     <thead class="thead-light">
         <tr>
             <th>Sr. No.</th>
-            <th>Campus ID</th>
             <th>Campus Name</th>
             <th>Campus Image</th>
 	    <th>campus_status</th>
@@ -280,14 +275,12 @@ if(isset($_POST['campus_details'])){
     </thead>
     <tbody>	    
 	    <?php
-		$n=0;
+		$n=1;
 	foreach($data as $res)
-		{
-	
+		{	
 		echo "
 		<tr>
-            <td>".$n++."</td>           
-            <td>".$res->campus_id."</td>
+            <td>".$n++."</td>          
 	    <td>".$res->campus_name."</td>
 	    <td>".$res->campus_image."</td>
 	    <td>".$res->campus_status."</td>
@@ -314,38 +307,7 @@ if(isset($_POST['campus_details'])){
 </div>
 
 </form>
-	
-	<table class="table">
-    <thead class="thead-light">
-        <tr>
-            <th>Row</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Clark</td>
-            <td>Kent</td>
-            <td>clarkkent@mail.com</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>John</td>
-            <td>Carter</td>
-            <td>johncarter@mail.com</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Peter</td>
-            <td>Parker</td>
-            <td>peterparker@mail.com</td>
-        </tr>            
-    </tbody>
-</table>
-         
+        
 <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-db44b196776521ea816683afab021f757616c80860d31da6232dedb8d7cc4862.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js'></script>
@@ -386,34 +348,6 @@ $('.responsive').slick({
   ] });
     </script>
     
-    <script>
-        
-        
-        function campus_details()
-
-	{
-
-console.log("campus details");
-      http = new XMLHttpRequest();
-                    http.open('POST', 'https://mavoix.in/workspace/vu-backend/api/campus-details.php', true);
-                    //Send the proper header information along with the request
-                    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                    http.onreadystatechange = function() { //Call a function when the state changes.
-                    	console.log(http.readyState );
-                    	console.log(http.status);
-                        if (http.readyState == 4 && http.status == 200) {
-                        	
-                            var response = JSON.parse(http.responseText);
-                         
-                           alert(response);
-                            
-                            document.getElementById('next').innerHTML=response;
-                        }
-                    }
-                    http.send();
-        }
-        
-        
-    </script>
+   
 </body>
 </html>
