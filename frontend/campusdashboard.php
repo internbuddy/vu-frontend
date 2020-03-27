@@ -300,7 +300,7 @@ if(isset($_POST['campus_details'])){
 }
 ?>
 	
-  <form method= "post">		
+  <form method= "post" class="card">		
 	  <button type="submit" name="campus_details" id="submit" value="Campus details" style="width:50%" >Get Campus Details</button>
 <!-- 	  <input type="submit" name="campus_details" id="submit" value="Campus details" >      -->
 <div  id="next">
