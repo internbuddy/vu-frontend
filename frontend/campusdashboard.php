@@ -252,7 +252,7 @@
 
 if(isset($_POST['campus_details'])){	
  $curl = curl_init();
- curl_setopt($curl, CURLOPT_URL, 'https://mavoix.in/workspace/vu-backend/api/get-campus-details.php');
+ curl_setopt($curl, CURLOPT_URL, 'https://skfoundations.org/kushala/vu/get_campus_details.php');
  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 	
